@@ -1,0 +1,14 @@
+{% extends "layout/basic.html" %}
+
+{% block title %}{{ current_rubric.name }}{% endblock %}
+
+{% block content %}
+<h2>Категория: {{ current_rubric.name }}</h2>
+{% for gg in ggs %}
+<div>
+    <h2>{{ gg.title }}</h2>
+    <p>{{ gg.content }}</p>
+    <p>{{ gg.published|date:"d.m.Y H:i:s" }}</p>
+</div>
+{% endfor %}
+{% endblock %}

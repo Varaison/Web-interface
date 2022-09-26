@@ -1,0 +1,14 @@
+{% extends "layout/basic.html" %}
+
+{% block content %}
+{% for gg in ggs %}
+<div>
+    <h2>{{ gg.title }}</h2>
+    <p>{{ gg.content }}</p>
+    <p><a href="{% url 'by_rubric' gg.rubric.pk %}">
+    {{ gg.rubric.name }}</a></p>
+    <p>{{ gg.price }}</p>
+    <p>{{ gg.published|date:"d.m.Y H:i:s" }}</p>
+</div>
+{% endfor %}
+{% endblock %}
