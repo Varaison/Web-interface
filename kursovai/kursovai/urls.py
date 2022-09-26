@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include       # Импорт include позволяет включить в проект приложение с адресами
 
 urlpatterns = [
-    path('gods/', include('gods.urls')),       # Добавление адреса gods/ из папки приложения urls.py
+    path('', include('gods.urls')),       # Добавление адреса gods/ из папки приложения urls.py
     path('admin/', admin.site.urls),
 ]
